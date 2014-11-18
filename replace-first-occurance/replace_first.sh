@@ -5,3 +5,5 @@
 # sed -e '0,/^ *error_reporting/{s/error_reporting/;error_reporting1/}' t1.txt
 
 sed -i.bak '1,/error_reporting/{s/error_reporting/;error_reporting/;}' config.ini
+
+sed -i.bak '/^error_reporting/{s/error_reporting.*=.*/error_reporting=E_ALL/;}' config.ini
